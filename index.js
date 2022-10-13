@@ -12,6 +12,8 @@ app.use(bodyParser.json());
 
 main(app);
 
-const PORT = 3001;
-
-app.listen(PORT);
+app.listen(process.env.PROJECT_PORT, () => {
+  console.log(
+    `⚡️[JUCO]: Server is running at https://localhost:${process.env.PROJECT_PORT}`
+  );
+});
