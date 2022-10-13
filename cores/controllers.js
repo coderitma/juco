@@ -4,7 +4,7 @@ const UserModel = require("./models");
 
 const UserController = express.Router();
 
-UserController.post("/", [], async (req, res) => {
+UserController.post("/register", [], async (req, res) => {
   try {
     const { salt, password } = makePassword(req.body.password);
     req.body.salt = salt;
